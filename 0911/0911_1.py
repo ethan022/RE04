@@ -168,3 +168,13 @@ elif grade == 2:
     print('2학년 입니다')  # grade = 2이므로 실행
 else:
     print('1학년 입니다')
+
+
+if True:
+    if True:
+        if True:
+            pass
+        if True:
+            pass
+        if True:
+            pass
