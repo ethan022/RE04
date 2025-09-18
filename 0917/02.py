@@ -187,3 +187,27 @@ print("3. break: 반복문 즉시 탈출")
 print("4. continue: 이번 반복만 건너뛰기")
 print("5. while True: 무한반복 (break로 탈출)")
 print("="*40)
+
+print()
+print('======== 이중 for문 ========')
+# 이중 for문 - 구구단
+for i in range(2, 10):
+    print(f'=== {i}단 ===')
+    for j in range(1, 10):
+        print(f'{i} x {j} = {i * j}')
+    print()
+print()
+
+
+print('======== 이중 while문 ========')
+
+i = 2  # 초기값
+
+while i < 10:
+    j = 1
+    print(f'=== {i}단 ===')
+    while j < 10:
+        print(f'{i} x {j} = {i * j}')
+        j += 1  # 수 증가
+    print()
+    i += 1  # 단 증가
