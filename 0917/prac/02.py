@@ -67,40 +67,76 @@
 # ■ 사용자의 입력이 정답과 일치하면 "입장 완료! 환영합니다."를 출력하고 break로 루프를 종료하세요.
 # ■ 정답이 틀렸다면 "비밀 코드가 틀렸습니다. 다시 시도하세요."를 출력한 후 루프를 계속 진행합니다.
 
-secret_code = "codingonre3"
-code = ""
+# secret_code = "codingonre3"
+# code = ""
 
-while code != secret_code:
-    code = input('비밀 코드를 입력하세요.:')
-    if code == secret_code:
-        print('입장 완료! 환영합니다.')
-        break
-    else:
-        print('비밀 코드가 틀렸습니다. 다시 시도하세요.')
+# while code != secret_code:
+#     code = input('비밀 코드를 입력하세요.:')
+#     if code == secret_code:
+#         print('입장 완료! 환영합니다.')
+#         break
+#     else:
+#         print('비밀 코드가 틀렸습니다. 다시 시도하세요.')
 
 
-# ★ 문제2. 유효한 나이만 평균 내기
-# 사용자에게 총 5명의 나이를 입력 받아야 합니다.
-# 유효한 나이들만 평균을 내어 출력하세요.
+# # ★ 문제2. 유효한 나이만 평균 내기
+# # 사용자에게 총 5명의 나이를 입력 받아야 합니다.
+# # 유효한 나이들만 평균을 내어 출력하세요.
+
+# # 조건
+# # ■ 변수 times는 유효한 입력의 개수를 셉니다.
+# # ■ 변수 sum_age는 나이의 합계를 저장합니다.
+# # ■ 나이는 정수로 입력 받습니다.
+# # ■ 나이가 0 이하이거나 120보다 크면 무시하고 반복을 건너뜁니다.
+# # ■ 5개의 유효한 나이를 입력 받으면 루프를 종료하고, 총합과 평균을 출력합니다.
+
+# times = 0
+# sum_age = 0
+
+# while times < 5:
+#     age = int(input('나이를 입력하세요.'))
+#     if 0 < age <= 120:
+#         sum_age += age
+#         times += 1
+#     else:
+#         print('잘못된 나이 입니다. 다시 입력해 주세요.')
+
+# avg = sum_age / 5
+
+# print(f'총 나이 합계는 {sum_age}, 평균은 {avg:.0f} 입니다.')
+
+
+# 실습3. 중첩 while문 연습문제
+
+# ★문제1. 로그인 시스템 구현
+# 로그인 시스템을 만들고 있습니다.
+# 순서대로 ID와 비밀번호를 입력 받고,
+# ID와 비밀번호 모두 맞으면 로그인 성공 메시지를 출력하세요.
 
 # 조건
-# ■ 변수 times는 유효한 입력의 개수를 셉니다.
-# ■ 변수 sum_age는 나이의 합계를 저장합니다.
-# ■ 나이는 정수로 입력 받습니다.
-# ■ 나이가 0 이하이거나 120보다 크면 무시하고 반복을 건너뜁니다.
-# ■ 5개의 유효한 나이를 입력 받으면 루프를 종료하고, 총합과 평균을 출력합니다.
+# ■ 임의의 ID와 비밀번호를 세팅합니다.
+# ■ 잘못된 ID일 경우 "ID가 존재하지 않습니다." 를 출력하고 다시 ID를 입력 받습니다.
+# ■ ID가 맞으면 비밀번호를 입력 받고,
+#  비밀번호가 틀리면 "비밀번호가 틀렸습니다." 를 출력하고 다시 입력 받습니다.
+# ■ 둘 다 맞으면 "로그인 성공!" 을 출력하고 프로그램을 종료합니다
 
-times = 0
-sum_age = 0
+saved_id = 'admin'
+saved_pw = 'admin123'
 
-while times < 5:
-    age = int(input('나이를 입력하세요.'))
-    if 0 < age <= 120:
-        sum_age += age
-        times += 1
+input_id = ''
+input_pw = ''
+
+while True:
+    input_id = input('ID를 입력하세요:')
+
+    if saved_id == input_id:
+        while True:
+            input_pw = input("PW를 입력하세요:")
+            if saved_pw == input_pw:
+                print('로그인 성공!')
+                break  # PW while문 탈출
+            else:
+                print('비밀번호가 틀렸습니다.')
+        break  # ID while문 탈출
     else:
-        print('잘못된 나이 입니다. 다시 입력해 주세요.')
-
-avg = sum_age / 5
-
-print(f'총 나이 합계는 {sum_age}, 평균은 {avg:.0f} 입니다.')
+        print('ID가 존재하지 않습니다.')
