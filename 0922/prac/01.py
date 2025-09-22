@@ -54,3 +54,44 @@ h = int(input('높이를 입력해주세요:'))
 
 rect = Rectangle(w, h)
 print('사각형의 넓이: ', rect.area())
+
+
+class User:
+    total_users = 0
+
+    def __init__(self, name):
+        self.username = name
+        self.points = 0
+        # 클래스 변수 업데이트
+        User.total_users += 1
+
+    def add_points(self, amount):
+        '''포인트 추가'''
+        self.points += amount
+
+    def get_level(self):
+        '''포인트 기준으로 레벨 반환'''
+        if 0 <= self.points < 100:
+            return 'Bronze'
+        elif 100 <= self.points < 500:
+            return 'Silver'
+        elif 500 <= self.points:
+            return 'Gold'
+
+    @classmethod
+    def get_total_users(cls):
+        print(f'총 유저 수 : {cls.total_users}')
+
+    def __del__(self):
+        User.total_users -= 1
+
+
+user1 = User('김철수')
+user2 = User('홍길동')
+user3 = User('이영희')
+
+User.get_total_users()  # 3
+
+del user2
+
+User.get_total_users()  # 2
