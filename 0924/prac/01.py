@@ -75,6 +75,7 @@ def saved_phone(input_id):
 
     # 딕셔너리에 전화번호 추가/수정
     # 키가 이미 있으면 값이 수정되고, 없으면 새로 추가됨
+
     members[input_id] = input_phone
 
     # 업데이트된 전화번호 딕셔너리를 파일에 저장
@@ -302,7 +303,7 @@ if __name__ == "__main__":
     print("🚀 파일 기반 회원 관리 시스템을 시작합니다!")
 
     # 실제 실행 시에는 main_menu()를 호출하세요
-    # main_menu()
+    main_menu()
 
     # 코드 설명을 위한 시뮬레이션 실행
     print("\n" + "=" * 60)
