@@ -33,3 +33,9 @@ h3 {
 
 /* 형제 선택자 */
 /* 인접 형제 선택자 (Adjacent Sibling - +) */
+/* 바로 다음 형제 요소만 선택 */
+h2 + p {
+  font-weight: bold;
+  color: chartreuse;
+  /* 첫 번째 문단만 */
+}
