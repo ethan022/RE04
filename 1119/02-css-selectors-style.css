@@ -1,0 +1,35 @@
+/* CSS 선택자 심화 */
+
+/* 복합 선택자 */
+/* 그룹 선택자 (여러 요소에 동일 스타일) */
+h1,
+h2,
+h3 {
+  color: navy;
+}
+
+/* 자손과 자식 선택자 */
+
+/* 자손 선택자(Descendant - 공백) */
+/* 모든 하위 요소 선택 */
+.container p {
+  color: darkcyan;
+}
+
+/* 자식 선택자 (Child - > ) */
+/* 직계 자식만 선택 */
+.container > p {
+  color: red;
+}
+
+/* 모든 li 선택 */
+.menu li {
+  color: blue;
+}
+/* 직계 자식 li만 선택 */
+.menu > li {
+  color: red;
+}
+
+/* 형제 선택자 */
+/* 인접 형제 선택자 (Adjacent Sibling - +) */
