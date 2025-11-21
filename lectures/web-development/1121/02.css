@@ -1,0 +1,30 @@
+/* Grid */
+/* 2차원 레이아웃 시스템 */
+
+.container {
+  display: grid;
+  /* 열 정의 */
+  /* grid-template-columns: 200px 200px 200px; */
+  /* 다양한 크기 */
+  /* grid-template-columns: 100px 150px 200px; */
+  /* 백분율 */
+  /* grid-template-columns: 25% 50% 25%; */
+  /* fr단위 (fraction) */
+  /* 남은 공간을 비율로 분배 */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* 고정 + 유동 */
+  /* grid-template-columns: 1fr 200px 1fr; */
+  /* repeat() 함수 */
+  /* 3개의 열, 각 1fr */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* 3개의 열, 각 200px */
+  /* grid-template-columns: repeat(3, 200px); */
+  /* 4개의 열, 각 100px, 200px */
+  grid-template-columns: repeat(2, 200px 100px);
+}
+
+.item {
+  background-color: burlywood;
+  height: 150px;
+  font-size: 48px;
+}

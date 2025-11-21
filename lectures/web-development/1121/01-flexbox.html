@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS FlexBox 학습 자료</title>
+    <link rel="stylesheet" href="01-flexbox.css" />
+  </head>
+  <body>
+    <!--
+      ============================================
+      예제 1: 기본 FlexBox 컨테이너
+      ============================================
+      목적: flex-direction, justify-content, align-items 속성 학습
+      사용법: 아래 주석을 해제하고 다른 예제는 주석 처리하여 학습
+    -->
+    <!-- <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div> -->
+
+    <!--
+      ============================================
+      예제 2: FlexBox를 활용한 네비게이션바
+      ============================================
+      목적: 실무에서 자주 사용되는 네비게이션바 구현 학습
+      - justify-content: space-between으로 로고와 메뉴를 양쪽 끝에 배치
+      - align-items: center로 세로 중앙 정렬
+      - gap 속성으로 메뉴 아이템 간격 조절
+    -->
+    <nav class="navbar">
+      <div class="logo">logo</div>
+      <ul class="menu">
+        <li><a href="">홈</a></li>
+        <li><a href="">소개</a></li>
+        <li><a href="">서비스</a></li>
+        <li><a href="">연락처</a></li>
+      </ul>
+    </nav>
+
+    <!--
+      ============================================
+      예제 3: flex-wrap과 개별 아이템 속성
+      ============================================
+      목적: flex-wrap, flex-grow, flex-shrink, align-self, order 속성 학습
+      사용법: 아래 주석을 해제하고 다른 예제는 주석 처리하여 학습
+      학습 내용:
+      - flex-wrap: 아이템이 컨테이너를 벗어날 때 줄바꿈 처리
+      - flex-grow: 남은 공간을 차지하는 비율
+      - flex-shrink: 공간이 부족할 때 축소되는 비율
+      - align-self: 개별 아이템의 교차축 정렬
+      - order: 시각적 순서 변경 (HTML 구조는 유지)
+    -->
+    <!-- <div class="container1">
+      <div class="item0 item1">1</div>
+      <div class="item0 item2">2</div>
+      <div class="item0 item3">3</div>
+      <div class="item0 item4">4</div>
+      <div class="item0 item5">5</div>
+    </div> -->
+
+    <!--
+      ============================================
+      예제 4: align-content (여러 줄 정렬)
+      ============================================
+      목적: flex-wrap: wrap 상태에서 여러 줄의 정렬 방식 학습
+      학습 내용:
+      - align-content: flex-wrap으로 여러 줄이 생겼을 때 줄들의 정렬 방식
+      - align-items와의 차이점 이해
+        * align-items: 한 줄 내에서 아이템들의 정렬
+        * align-content: 여러 줄 전체의 정렬
+    -->
+    <div class="container2">
+      <div class="item00 item11">1</div>
+      <div class="item00 item22">2</div>
+      <div class="item00 item33">3</div>
+      <div class="item00 item44">4</div>
+      <div class="item00 item55">5</div>
+    </div>
+  </body>
+</html>
